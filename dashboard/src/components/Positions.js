@@ -2,12 +2,11 @@ import React,{ useState, useEffect } from "react";
 import { all } from "axios";
 import axios from "axios";
 
-// import { positions } from "../data/data";
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/addPositions")   //axios.get try to connect it to the link and try to get response from it
+    axios.get("http://localhost:3002/addPositions")   
       .then((res) => setAllPositions(res.data))
       .catch(err => console.error("Axios error:", err));
   }, []);
@@ -30,11 +29,11 @@ const Positions = () => {
 
           {allPositions.map((stock, index) => {
             const curValue = stock.price * stock.qty;
-            const isProfit = curValue - stock.avg * stock.qty >= 0.0; //boolean value return
-            const profClass = isProfit ? "profit" : "loss";      //boolean value return
-            const dayClass = stock.isLoss ? "loss" : "profit";    //boolean value return
+            const isProfit = curValue - stock.avg * stock.qty >= 0.0; 
+            const profClass = isProfit ? "profit" : "loss";      
+            const dayClass = stock.isLoss ? "loss" : "profit";    
 
-            return (    // <-- this return is for the map function, not the component
+            return (    
               <tr key={index}>
                 <td>{stock.product}</td>
                 <td>{stock.name}</td>

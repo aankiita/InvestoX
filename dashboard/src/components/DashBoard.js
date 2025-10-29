@@ -28,7 +28,6 @@ const Dashboard = () => {
           <Route path="/funds" element={<Funds />} />
           <Route path="/apps" element={<Apps />} />
           <Route path="/funds/linkAccount" element={<LinkBankAccount />} />
-          {/* <Route path="/logout" element={<Logout />} /> */}
         </Routes>
       </div>
     </div>

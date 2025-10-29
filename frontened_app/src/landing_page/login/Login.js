@@ -43,7 +43,7 @@ const Login = () => {
       );
 
       console.log(data);
-      const { success, message, token,username } = data; // ⬅️ Added token here
+      const { success, message, token,username } = data; 
 
       if (success) {
         handleSuccess(message);

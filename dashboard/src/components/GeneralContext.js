@@ -5,7 +5,7 @@ import SellActionWindow from "./SellActionWindow";
 import AnalyticsWindow from "./AnalyticsWindow";
 import AboutWindow from "./AboutWindow"; 
 
-const GeneralContext = React.createContext({  //React has createContext as a built-in API function   jo ki 2 function share kar raha hai Yahaan hum 2 functions share kar rahe hain(openBuyWindow(uid) → Buy window kholta hai.closeBuyWindow() → Buy window band karta hai.)
+const GeneralContext = React.createContext({  
   openBuyWindow: (uid) => {},
   closeBuyWindow: () => {},
 
@@ -63,7 +63,6 @@ export const GeneralContextProvider = (props) => {
     setSelectedStockUID("");
   };
 
-  {/*GeneralContext.Provider ke through hum ye functions sab child components ko share kar rahe hain. value={{ }} ke through */}
   return (
     <GeneralContext.Provider    
       value={{
@@ -77,9 +76,9 @@ export const GeneralContextProvider = (props) => {
         closeAboutWindow: handleCloseAboutWindow,
       }}
     >
-      {props.children}   {/*{props.children} ka matlab — jo bhi component is provider ke andar likha gaya hai, wo display hoga jab bhi GeneralContext.Provider use krenge. */}
+      {props.children}   
 
-      {isBuyWindowOpen && <BuyActionWindow uid={selectedStockUID} />}   {/*Agar isBuyWindowOpen true hai to <BuyActionWindow />run karega. */}
+      {isBuyWindowOpen && <BuyActionWindow uid={selectedStockUID} />}  
       {isSellWindowOpen && <SellActionWindow uid={selectedStockUID}/>}
       {isAnalyticsWindowOpen && <AnalyticsWindow uid={selectedStockUID} />}
       {isAboutWindowOpen && <AboutWindow uid={selectedStockUID} />}

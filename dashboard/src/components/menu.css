@@ -1,7 +1,7 @@
 .profile-dropdown {
   position: absolute;
   top: 10px;
-  right: 0; /* 👈 this ensures it aligns with the right edge of the avatar */
+  right: 0; 
   background-color: #fff;
   padding: 10px 16px;
   border-radius: 8px;
@@ -10,7 +10,7 @@
   text-align: center;
   z-index: 10;
   min-width: 140px;
-  transform: translateX(5%); /* 👈 shift slightly left to stay on screen */
+  transform: translateX(5%); 
 }
 
 .profile-dropdown p {

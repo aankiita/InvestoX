@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import "./menu.css";
 
 const Menu = () => {
-  const [selectedMenu, setSelectedMenu] = useState(0);  //0 matlab abhi hum dashboard par hai ,1 ka matlab order par jyenge, 2 ka matlab holdings par jayenge and so on...
+  const [selectedMenu, setSelectedMenu] = useState(0); 
 
   const [isHovered, setIsHovered] = useState(false);
-   // ✅ access both token and username from cookies
+   
   const [cookies, setCookie, removeCookie] = useCookies(["token", "username"]);
 
   const username = cookies.username || "User";
@@ -15,7 +15,7 @@ const Menu = () => {
 
   const handleLogout = () => {
     removeCookie("token", { path: "/" });
-    removeCookie("username", { path: "/" }); // ✅ clear username on logout
+    removeCookie("username", { path: "/" }); 
     window.open("http://localhost:3001/", "_blank");
   };
 
@@ -24,7 +24,7 @@ const Menu = () => {
   };
 
 
-  const menuClass = "menu";  //similar to class="menu" means we are giving css class to menuClass so we can apply css property on it
+  const menuClass = "menu";  
   const activeMenuClass = "menu selected";
 
   return (
@@ -76,10 +76,8 @@ const Menu = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             style={{ cursor: "pointer", position: "relative" }}>
-            {/* Show only ZU when not hovered */}
             {!isHovered && <div className="avatar">ZU</div>}
 
-           {/* When hovered → show username + logout */}
            {isHovered && (
               <div className="profile-dropdown">
                 <p className="username">{username}</p>

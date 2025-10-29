@@ -219,20 +219,19 @@
     color: #fff;
   }
 
-  /* Analytics Window Overlay */
 #analytics-window {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 420px; /* little broad window */
-  max-height: 80vh; /* never go outside viewport */
-  overflow-y: auto; /* scroll if content is large */
+  width: 420px; 
+  max-height: 80vh; 
+  overflow-y: auto; 
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
-  z-index: 9999; /* ensures it stays above dashboard */
+  z-index: 9999; 
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -248,7 +247,6 @@
   padding-bottom: 0.6rem;
 }
 
-/* Input Section */
 #analytics-window .regular-order {
   display: flex;
   flex-direction: column;
@@ -257,14 +255,13 @@
   max-height: 55vh;
 }
 
-/* Grid layout for fundamentals */
+
 #analytics-window .inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.8rem;
 }
 
-/* Fieldset styling */
 #analytics-window fieldset {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -286,7 +283,6 @@
   color: #333;
 }
 
-/* Buttons */
 #analytics-window .buttons {
   display: flex;
   align-items: center;
@@ -307,7 +303,6 @@
   background-color: #bbb;
 }
 
-/* Optional overlay background (if you want dimmed background effect) */
 #analytics-overlay {
   position: fixed;
   top: 0;
@@ -319,8 +314,6 @@
 }
 
 
-/*for about window*/
-/* Main Window */
 #about-window {
   position: fixed;
   bottom: 6%;
@@ -339,7 +332,6 @@
   gap: 1.2rem;
 }
 
-/* Title */
 #about-window h2 {
   font-size: 1.5rem;
   text-align: center;
@@ -353,21 +345,18 @@
   margin-bottom: 1rem;
 }
 
-/* Scrollable Content */
 #about-window .regular-order {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* Info fields grid */
 #about-window .inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-/* Field boxes */
 #about-window fieldset {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -389,7 +378,6 @@
   color: #333;
 }
 
-/* Description at bottom */
 #about-window .description {
   margin-top: 0.8rem;
   font-size: 1rem;
@@ -401,7 +389,6 @@
   padding: 0.8rem 1rem;
 }
 
-/* Close button */
 #about-window .buttons {
   display: flex;
   justify-content: center;
@@ -421,7 +408,6 @@
   background-color: #bbb;
 }
 
-/* Optional background overlay */
 #about-overlay {
   position: fixed;
   top: 0;

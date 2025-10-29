@@ -39,43 +39,9 @@ code {
   font-weight:400;
 }
 
-
-/*auth*/
-/* *, */
-/* ::before,
-::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-label {
-  font-size: 1.2rem;
-  color: #656262;
-} */
-/* 
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(143, 187, 204, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-} */
-
 .form_containerr {
   background-color: #fff;
-  margin: 4rem auto; /* centers horizontally */
+  margin: 4rem auto; 
   padding: 2rem 3rem;
   border-radius: 0.5rem;
   width: 100%;
@@ -173,10 +139,7 @@ span a {
   }
 }
 
-
-
-/* 📱 Responsive Design Only */
-
+/*responsibe website nature*/
 /* For tablets and small laptops */
 @media (max-width: 1024px) {
   .form_containerr {

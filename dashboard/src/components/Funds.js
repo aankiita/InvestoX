@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Funds = () => {
   const navigate = useNavigate();
   const handleOpenSignup = () => {
-       navigate("/funds/linkAccount"); // Navigate to LinkBankAccount page
+       navigate("/funds/linkAccount"); 
     };
   return (
     <>

@@ -47,13 +47,6 @@ const HomePage = () => {
   };
   return (
     <>
-      {/* <div className="home_pagee">
-        <h4>
-          {" "}
-          Welcome <span>{username}</span>
-        </h4>
-        <button onClick={Logout}>LOGOUT</button>
-      </div> */}
       <ToastContainer />
         <Hero/>
         <Awards/>

@@ -846,7 +846,7 @@ hr {
 .form_containerr {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
-  margin: 4rem auto; /* centers horizontally */
+  margin: 4rem auto; 
   padding: 2rem 3rem;
   border-radius: 0.5rem;
   width: 100%;
@@ -910,8 +910,7 @@ hr {
 }
 
 
-/* 📱 Responsive Design Only */
-
+/* Responsive Design Only */
 /* For tablets and small laptops */
 @media (max-width: 1024px) {
   .form_containerr {

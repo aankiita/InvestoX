@@ -27,13 +27,12 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Holdings",  //change text from chart.js Bar chart that was in react document to Holding as we are making graph for holding
+      text: "Holdings",  
     },
   },
 };
 
-export function VerticalGraph({ data }) {   //hum apna data pass kar rahe hai(as a prop) jo ki humara data hum Holding mai create karenge taki data ka ye graph bana kar de
+export function VerticalGraph({ data }) {   
   return <Bar options={options} data={data} />;
 }
 
-//call the VerticalGraph in Holding.js

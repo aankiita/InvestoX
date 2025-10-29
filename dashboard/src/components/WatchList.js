@@ -10,13 +10,10 @@ import {
   InfoOutlined,
 } from "@mui/icons-material";
 
-//KeyboardArrowDown,KeyboardArrowUp--> these class come from materialUI 
 import { watchlist } from "../data/data";
 import { DoughnutChart } from "./DoughnoutChart";
 
 const labels = watchlist.map((stock) => stock.name);
-//const labels = watchlist.map((subArray) => subArray["name"]);  ////watchlist to data.js se aa rha hai  uska bass naam extract karo qki ek holding mai name,profit,price sab hota hai to extract name only we can write
-  //map((subArray)=>subArray(["name"]))  ["name"] matlab bass uska naam chahiye,so label will contain all watchlist name
 
 const WatchList = () => {
   const data = {
@@ -57,7 +54,7 @@ const WatchList = () => {
           placeholder="Search"
           className="search"
         />
-        <span className="counts"> {watchlist.length} / 50</span>   {/*watchlist.length=9 */}
+        <span className="counts"> {watchlist.length} / 50</span>   
       </div>
 
       <ul className="list">
@@ -74,10 +71,9 @@ const WatchList = () => {
 export default WatchList;
 
 const WatchListItem = ({ stock }) => {
-  const [showWatchlistActions, setShowWatchlistActions] = useState(false); //starting m kuch v show nhi krna qki sare showwatchlist stock ki value false  hai, jo stock ki value true hogi ushi pr mousehover function km krega or uska hi sara detail dikhyegi dega
-
-  const handleMouseEnter = (e) => {   //jab mouse se click kregnge tabb  setshowWatchlistActions ki value true ho jygi , jisse  jiise uska sara detail dikhyegi dega.
-    setShowWatchlistActions(true);   ///jab mouse hatyega  tabb  setshowWatchlistActions ki value false ho jygi, jiise uska sara detail dikhna band ho jyga.
+  const [showWatchlistActions, setShowWatchlistActions] = useState(false); 
+  const handleMouseEnter = (e) => { 
+    setShowWatchlistActions(true);   
   };
 
   const handleMouseLeave = (e) => {
@@ -87,7 +83,7 @@ const WatchListItem = ({ stock }) => {
   return (
     <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="item">
-        <p className={stock.isDown ? "down" : "up"}>{stock.name}</p>   {/*stock.isDown ? "down" : "up"---> for setting colour of stock either blue or green down-red up-blue */}
+        <p className={stock.isDown ? "down" : "up"}>{stock.name}</p>   
         <div className="itemInfo">
           <span className="percent">{stock.percent}</span>
           {stock.isDown ? (
@@ -98,27 +94,25 @@ const WatchListItem = ({ stock }) => {
           <span className="price">{stock.price}</span>
         </div>
       </div>
-      {showWatchlistActions && <WatchListActions uid={stock.name} />}  {/*agar ye true hoga tab hi WatchListActions wala function call hoga */}
+      {showWatchlistActions && <WatchListActions uid={stock.name} />}  
     </li>
   );
 };
 
-const WatchListActions = ({ uid }) => {   //jo icons hai jaise buy box ke andr sell ya graph ushi ke lie hum  WatchListActions bana rahe hai .
-// (uid use islie kar rahe hai taki pata chl sake ki kis particular item par hume hover show karna hai-->>index ko humlog uuid ke tarah use karenge)
+const WatchListActions = ({ uid }) => {   
   const generalContext = useContext(GeneralContext);
 
   const handleBuyClick = () => {
-    generalContext.openBuyWindow(uid);  //opeBuywindow is inbuilt function inside GeneralContext
+    generalContext.openBuyWindow(uid);  
   };
   const handleSellClick = () => {
-    generalContext.openSellWindow(uid);  //opeBuywindow is inbuilt function inside GeneralContext
+    generalContext.openSellWindow(uid);  
   };
 
   const handleAnalyticsClick = () => {
     generalContext.openAnalyticsWindow(uid); 
   };
-  //jub onclick mouse karenge toh hume us stock k pass sell,buy,graph show karne lage
-
+  
   const handleAboutClick = () => {    
     generalContext.openAboutWindow(uid);
   };
@@ -126,9 +120,9 @@ const WatchListActions = ({ uid }) => {   //jo icons hai jaise buy box ke andr s
     <span className="actions">
       <span>
         <Tooltip
-          title="Buy (B)"  //title is just a name agar buy wale button par click kie the gray colour mai BUY(B) upar mai show hoga 
-          placement="top"   //title kaha show karna chye but ke top mai to placement="top" agar down mai to placement="bottom"
-          arrow  //box ke niche mai thora sa arrow ayega jo dikhyega ye buy button ka hai islie arrow use karte hai
+          title="Buy (B)"  
+          placement="top"   
+          arrow  
           TransitionComponent={Grow}
           onClick={handleBuyClick}
         >
@@ -138,7 +132,7 @@ const WatchListActions = ({ uid }) => {   //jo icons hai jaise buy box ke andr s
           title="Sell (S)"
           placement="top"
           arrow
-          TransitionComponent={Grow}   //TransitionComponent={Grow} → the tooltip grows smoothly from small to full size when it appears. like zoom -->in ,out and fade--> in ,out 
+          TransitionComponent={Grow}  
           onClick={handleSellClick} 
         >
           <button className="sell">Sell</button>
@@ -150,7 +144,7 @@ const WatchListActions = ({ uid }) => {   //jo icons hai jaise buy box ke andr s
           TransitionComponent={Grow}
           onClick={handleAnalyticsClick} 
         >
-          <button className="action"><BarChartOutlined className="icon" /></button> {/*<BarChartOutlined /> comes from material ui -->renders a bar chart icon inside the button. */}
+          <button className="action"><BarChartOutlined className="icon" /></button>  
         </Tooltip>
         <Tooltip title="More" 
             placement="top" 
@@ -158,7 +152,7 @@ const WatchListActions = ({ uid }) => {   //jo icons hai jaise buy box ke andr s
             TransitionComponent={Grow}
             onClick={handleAboutClick}
             >
-          <button className="action"> <MoreHoriz className="icon" /></button>  {/*<MoreHoriz/> comes from material ui for more wala icon */}
+          <button className="action"> <MoreHoriz className="icon" /></button>  
         </Tooltip>
       </span>
     </span>

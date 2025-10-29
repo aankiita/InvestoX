@@ -1,13 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import GeneralContext from "./GeneralContext";
-import { fundamentals } from "../data/fundamentals"; // ✅ import your fundamentals data
-import "./BuyActionWindow.css"; // same styling as Buy window
-
+import { fundamentals } from "../data/fundamentals"; 
+import "./BuyActionWindow.css"; 
 const AnalyticsWindow = ({ uid }) => {
   const { closeAnalyticsWindow } = useContext(GeneralContext);
-
-  // Find company data from fundamentals list
   const company = fundamentals.find((item) => item.name === uid);
 
   if (!company) {

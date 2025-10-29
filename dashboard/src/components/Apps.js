@@ -1,40 +1,8 @@
-// import React from "react";
-
-// const Apps = () => {
-//   const handleOpenFrontendApp = () => {
-//     // open frontend_app running on another port (example: 3001)
-//     window.location.href = "http://localhost:3001";
-//   };
-
-//   return (
-//     <div style={{ textAlign: "center", marginTop: "2rem" }}>
-//       <h1>Apps Dashboard</h1>
-//       <button
-//         onClick={handleOpenFrontendApp}
-//         style={{
-//           backgroundColor: "#007bff",
-//           color: "white",
-//           padding: "10px 20px",
-//           borderRadius: "6px",
-//           border: "none",
-//           cursor: "pointer",
-//           fontSize: "16px",
-//         }}
-//       >
-//         Go on Home Page
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Apps;
-
-
 import React from "react";
 
 const Apps = () => {
   const handleKnowMore = () => {
-    window.location.href = "http://localhost:3001"; // Opens Zerodha site in new tab
+    window.location.href = "http://localhost:3001"; 
   };
 
   return (

@@ -9,9 +9,9 @@ function Navbar() {
         removeCookie("token");
         navigate("/login"); 
     };
-    const isLoggedIn = !!cookies.token; // check if token exists
+    const isLoggedIn = !!cookies.token; 
      const handleOpenDashboard = () => {
-        window.open("http://localhost:3000", "_blank"); // opens dashboard in new tab
+        window.open("http://localhost:3000", "_blank");
     };
     return ( 
         <nav className="navbar navbar-expand-lg border-bottom sticky-top" style={{backgroundColor:"#FFF"}}>
