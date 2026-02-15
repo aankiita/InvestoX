@@ -27,7 +27,7 @@ const HomePage = () => {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "http://localhost:3002",
+        "https://investox-to0s.onrender.com",
         {},
         { withCredentials: true }
       );
