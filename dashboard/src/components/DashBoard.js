@@ -9,7 +9,6 @@ import Orders from "./Orders";
 import Positions from "./Positions";
 import Summary from "./summary";
 import WatchList from "./WatchList";
-import Logout from "./Logout";
 import { GeneralContextProvider } from "./GeneralContext";
 import LinkBankAccount from "./LinkBankAccount";
 
@@ -33,5 +32,6 @@ const Dashboard = () => {
     </div>
   );
 };
+
 
 export default Dashboard;
