@@ -6,7 +6,7 @@ const Orders = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3002/buyOrder")
+      .get("https://investox-to0s.onrender.com/buyOrder")
       .then((res) => {
         let backendOrders = res.data || [];
         const latestOrder = localStorage.getItem("latestOrder");

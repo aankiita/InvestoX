@@ -6,7 +6,7 @@ const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/addPositions")   
+    axios.get("https://investox-to0s.onrender.com/addPositions")   
       .then((res) => setAllPositions(res.data))
       .catch(err => console.error("Axios error:", err));
   }, []);

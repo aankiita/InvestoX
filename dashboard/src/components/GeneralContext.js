@@ -5,7 +5,7 @@ import SellActionWindow from "./SellActionWindow";
 import AnalyticsWindow from "./AnalyticsWindow";
 import AboutWindow from "./AboutWindow"; 
 
-const GeneralContext = React.createContext({  
+const GeneralContext = React.createContext({    ////React has createContext as a built-in API function   jo ki 2 function share kar raha hai Yahaan hum 2 functions share kar rahe hain(openBuyWindow(uid) → Buy window kholta hai.closeBuyWindow() → Buy window band karta hai.)
   openBuyWindow: (uid) => {},
   closeBuyWindow: () => {},
 
@@ -62,7 +62,7 @@ export const GeneralContextProvider = (props) => {
     setIsAboutWindowOpen(false);
     setSelectedStockUID("");
   };
-
+  {/*GeneralContext.Provider ke through hum ye functions sab child components ko share kar rahe hain. value={{ }} ke through */}
   return (
     <GeneralContext.Provider    
       value={{

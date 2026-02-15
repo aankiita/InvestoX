@@ -13,7 +13,7 @@ const SellActionWindow = ({ uid }) => {
   const generalContext=useContext(GeneralContext);
 
   const handleSellClick = () => {
-    axios.post("http://localhost:3002/sellOrder", {    
+    axios.post("https://investox-to0s.onrender.com/sellOrder", {    
       name: uid,  
       qty: stockQuantity,
       price: stockPrice,
